@@ -75,6 +75,10 @@ JSON files in `outputs/paper_experiments/` contain:
 
 MIT License - See LICENSE file
 
+## Related Projects
+
+- **Zochi**: Full research framework - [github.com/IntologyAI/Zochi](https://github.com/IntologyAI/Zochi)
+
 ## Acknowledgments
 
 Based on the TEMPEST framework by Zhou & Arel (2025).
