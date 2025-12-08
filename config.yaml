@@ -1,0 +1,67 @@
+# TEMPEST Replication Study Configuration
+# ========================================
+# Paper: "Replication and Comparative Analysis of Multi-Turn Adversarial Attacks"
+# December 2025
+
+# Experiment Settings
+experiment:
+  name: "TEMPEST Replication Study"
+  date: "December 2025"
+  dataset: "JailbreakBench"
+  num_behaviors: 100
+
+# TEMPEST Attack Hyperparameters
+attack:
+  max_turns: 5
+  base_branch_factor: 6
+  base_active_branches: 12
+  adaptive_branching: true  # Increases branching based on complexity
+
+# Models
+models:
+  attacker: "deepseek-v3.1:671b-cloud"
+  evaluator_primary: "deepseek-v3.1:671b-cloud"
+  evaluator_secondary: "llama-guard3:8b"
+
+  targets:
+    - id: "gemma3:12b"
+      params: "12B"
+      type: "dense"
+    - id: "gpt-oss:20b-cloud"
+      params: "21B (3.6B active)"
+      type: "moe"
+    - id: "gpt-oss:120b-cloud"
+      params: "117B (5.1B active)"
+      type: "moe"
+    - id: "minimax-m2:cloud"
+      params: "230B (10B active)"
+      type: "moe"
+    - id: "glm-4.6:cloud"
+      params: "357B (32B active)"
+      type: "moe"
+    - id: "cogito-2.1:671b"
+      params: "671B"
+      type: "dense"
+    - id: "deepseek-v3.1:671b-cloud"
+      params: "671B (37B active)"
+      type: "moe"
+    - id: "mistral-large-3:cloud"
+      params: "675B"
+      type: "dense"
+    - id: "kimi-k2:1t-cloud"
+      params: "1000B (32B active)"
+      type: "moe"
+    - id: "kimi-k2-thinking:cloud"
+      params: "1000B (32B active)"
+      type: "moe_thinking"
+
+# Infrastructure
+infrastructure:
+  ollama_url: "http://10.10.0.202:11434"
+  rate_limit_delay: 30  # seconds between models
+
+# Evaluation
+evaluation:
+  cohens_kappa: 0.537
+  agreement_pct: 78.8
+  sample_size: 500
