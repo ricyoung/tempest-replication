@@ -179,7 +179,7 @@ TEMPEST employs multiple adversarial strategies, applied dynamically based on mo
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/fig4_vulnerability_spectrum.pdf}
+\includegraphics[width=0.95\textwidth]{figures/fig3_vulnerability_spectrum.pdf}
 \caption{Vulnerability spectrum by model, sorted by parameter count (left to right). Attack success rates range from 42\% (Kimi K2 Thinking) to 100\% (Gemma3 12B, Mistral Large 3). Red indicates ASR $\geq$ 90\%, yellow 50--89\%, green $<$ 50\%. The absence of a downward trend from left to right indicates no relationship between model scale and adversarial robustness. The dashed line indicates the 97\% baseline from Zhou and Arel (2025).}
 \label{fig:spectrum}
 \end{figure}
@@ -313,21 +313,21 @@ Six models achieved ASR between 96\% and 100\%, comparable to or exceeding the o
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/fig2_scale_panels.pdf}
+\includegraphics[width=0.95\textwidth]{figures/fig4_scale_panels.pdf}
 \caption{Scale vs.\ safety: model size does not predict adversarial robustness. (a) Total parameters vs.\ ASR shows no correlation ($r = -0.12$, n.s.) across nine models (excluding thinking mode variant). (b) Active parameters vs.\ ASR similarly shows no relationship. Filled circles indicate dense architecture (Gemma3 only); open triangles indicate mixture-of-experts. The smallest model (12B Gemma3) and largest MoE models (675B Mistral Large 3, 1T Kimi K2) all achieve $\geq$97\% ASR in standard mode. Dotted line indicates Zhou and Arel (2025) baseline.}
 \label{fig:scale}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figures/fig4_heatmap.pdf}
+\includegraphics[width=\textwidth]{figures/fig5_heatmap.pdf}
 \caption{Attack success rates by harm category across models. Heatmap shows ASR (\%) for each model-category combination. Highly vulnerable models (Gemma3, Mistral, DeepSeek) show uniform 100\% ASR across categories, while more resistant models exhibit category-specific variation (e.g., MiniMax M2: 10\% Violence vs. 70\% Privacy).}
 \label{fig:heatmap}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figures/fig_cost_of_resistance_PREVIEW.pdf}
+\includegraphics[width=\textwidth]{figures/fig6_cost_of_resistance.pdf}
 \caption{Computational cost of attacking each model. The scatter plot reveals an inverse relationship between attack success rate and total API queries required per 100 behaviors. Highly vulnerable models (red, upper-left) require fewer than 2,500 queries because TEMPEST's early termination stops exploration upon successful jailbreak. Resistant models (green, lower-right) require 13,000--24,000 queries as the tree search exhaustively explores branches before finding successful attack paths. This 10--27$\times$ cost multiplier demonstrates that while resistance rarely prevents eventual jailbreak, it substantially increases computational cost for attackers---a practical deterrent even when absolute prevention fails.}
 \label{fig:cost}
 \end{figure}
@@ -420,14 +420,14 @@ Standard Kimi K2 achieved 97\% ASR, while the thinking variant achieved 42\% ASR
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/fig3_thinking_comparison.pdf}
+\includegraphics[width=0.95\textwidth]{figures/fig7_thinking_comparison.pdf}
 \caption{Thinking mode comparison for Kimi K2. (a) Attack success rate reduced by 55 percentage points when thinking mode was enabled (97\% $\rightarrow$ 42\%). (b) Average turns to jailbreak increased 10.8$\times$ (1.6 $\rightarrow$ 17.2 turns), indicating substantially greater computational cost for successful attacks. While thinking mode provides meaningful protection, 42\% of attacks still succeed, indicating residual vulnerability even with extended reasoning.}
 \label{fig:thinking}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figures/fig_attack_progression_PREVIEW.pdf}
+\includegraphics[width=\textwidth]{figures/fig8_attack_progression.pdf}
 \caption{Attack progression curves showing cumulative successful jailbreaks by conversation turn. Immediately vulnerable models (Mistral, DeepSeek, Gemma3) reach near-maximum success within 1--2 turns, exhibiting ``brittle'' defenses that fail immediately. Resistant models (GPT-OSS variants, MiniMax, Kimi K2 Thinking) show gradual accumulation requiring 10+ turns, demonstrating ``persistent'' defenses that eventually yield but impose substantial cost on attackers.}
 \label{fig:progression}
 \end{figure}
@@ -450,7 +450,7 @@ Analysis of per-behavior success rates across all models (Figure~\ref{fig:funnel
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figures/fig_behavior_funnel.pdf}
+\includegraphics[width=\textwidth]{figures/fig9_behavior_funnel.pdf}
 \caption{Behavior difficulty distribution across all models. The funnel visualization shows that most behaviors are universally exploitable: 79\% succeeded against 8+ models, while only 3\% showed meaningful resistance (succeeding against $\leq$5 models). No behavior resisted all models entirely.}
 \label{fig:funnel}
 \end{figure}
@@ -486,7 +486,7 @@ The results provide clear evidence for all three hypotheses.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figures/fig5_literature_context.pdf}
+\includegraphics[width=\textwidth]{figures/fig10_literature_context.pdf}
 \caption{Literature context: when thinking mode helps vs.\ hurts safety. The matrix shows that the effect of thinking mode depends on attack type. Reasoning-targeted attacks (H-CoT) exploit visible reasoning chains, causing safety to degrade. General multi-turn attacks (this work, baseline) show that thinking mode provides protection---likely because extended reasoning enables identification of adversarial framing. Structured reasoning defenses (ARMOR) achieve strong protection. The finding that TEMPEST attacks are partially mitigated by thinking mode suggests that general multi-turn attacks do not specifically exploit reasoning chains, unlike H-CoT.}
 \label{fig:literature}
 \end{figure}
@@ -499,7 +499,7 @@ The present findings extend and contextualize prior work on multi-turn jailbreak
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/fig5_turns_dist.pdf}
+\includegraphics[width=0.7\textwidth]{figures/fig11_turns_dist.pdf}
 \caption{Distribution of turns required for successful jailbreak across all models. The distribution varies substantially by model, with highly vulnerable models succeeding in 1 to 2 turns and resistant models requiring 10 or more turns.}
 \label{fig:turns}
 \end{figure}
