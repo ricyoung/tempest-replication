@@ -8,8 +8,10 @@ from typing import List, Dict, Any
 
 from llm_client import LLMClient
 from harmbench_evaluator import HarmbenchEvaluator
+from ollama_evaluator import OllamaEvaluator
 from conversation_attack import ConversationAttack
 from pipeline_utils import setup_logging
+from error_handler import retry_with_exponential_backoff, safe_json_dump, create_progress_tracker
 
 from datasets import load_dataset
 
@@ -24,6 +26,21 @@ def main(args):
     logger = setup_logging({"log_file": "tempest_pipeline.log"})
     logger.info("Starting TEMPEST pipeline")
 
+    # Check if we're resuming from a previous run
+    resume_from_index = 0
+    if args.resume and os.path.exists(args.results_json):
+        logger.info(f"Resuming from previous run. Loading {args.results_json}")
+        try:
+            with open(args.results_json, "r") as f:
+                all_attack_results = json.load(f)
+            resume_from_index = len(all_attack_results)
+            logger.info(f"Resuming from behavior index {resume_from_index}")
+        except Exception as e:
+            logger.error(f"Error loading existing results: {str(e)}. Starting fresh.")
+            all_attack_results = []
+    else:
+        all_attack_results = []
+
     # Initialize the LLM clients for target and pipeline models
     target_model_name = args.target_model
     pipeline_model_name = args.pipeline_model
@@ -37,14 +54,21 @@ def main(args):
         logger.error(f"Error initializing LLM clients: {str(e)}")
         return
 
-    # Initialize the HarmbenchEvaluator
-    evaluator_api_key = os.getenv("OPENAI_API_KEY")
-    if not evaluator_api_key:
-        logger.error("OPENAI_API_KEY environment variable is not set")
-        return
+    # Initialize the Evaluator
+    # Check if we should use Ollama or OpenAI for evaluation
+    use_ollama_eval = os.getenv("USE_OLLAMA_EVALUATOR", "true").lower() == "true"
 
-    evaluator = HarmbenchEvaluator(api_key=evaluator_api_key)
-    logger.info("Initialized HarmbenchEvaluator")
+    if use_ollama_eval:
+        evaluator_model = os.getenv("EVALUATOR_MODEL", "deepseek-v3.1:671b-cloud")
+        evaluator = OllamaEvaluator(model_name=evaluator_model)
+        logger.info(f"Initialized OllamaEvaluator with model: {evaluator_model}")
+    else:
+        evaluator_api_key = os.getenv("OPENAI_API_KEY")
+        if not evaluator_api_key:
+            logger.error("OPENAI_API_KEY environment variable is not set")
+            return
+        evaluator = HarmbenchEvaluator(api_key=evaluator_api_key)
+        logger.info("Initialized HarmbenchEvaluator")
 
     # Load the JailbreakBench dataset
     logger.info("Loading JailbreakBench dataset")
@@ -60,8 +84,7 @@ def main(args):
         logger.error(f"Error loading JailbreakBench dataset: {str(e)}")
         return
 
-    # Prepare results storage
-    all_attack_results = []
+    # Prepare results storage (already initialized above for resume capability)
     total_behaviors = len(df)
     max_behaviors = int(os.getenv("MAX_BEHAVIORS", 100))
     time_limit_per_behavior = 600
@@ -73,13 +96,23 @@ def main(args):
 
     # Track attack evaluations across all behaviors
     all_attack_evaluations = []
-    
-    # Process each behavior
+
+    # Create progress tracker
+    progress = create_progress_tracker(len(df))
+    logger.info(f"Starting processing of {len(df)} behaviors")
+
+    # Process each behavior, skipping already completed ones
     for idx, row in df.iterrows():
+        progress.update(1)
+        # Skip behaviors we've already processed
+        if idx < resume_from_index:
+            logger.info(f"Skipping already processed behavior {idx+1}/{len(df)}")
+            continue
         behavior = row["Goal"]
         target_output = row["Target"]
 
         logger.info(f"Processing behavior {idx+1}/{len(df)}: {behavior}")
+        logger.info(f"Progress: {progress.get_summary()}")
 
         # Initialize the ConversationAttack instance
         attack = ConversationAttack(
@@ -166,19 +199,17 @@ def main(args):
 
 def save_results(results: List[Dict[str, Any]], filename: str, logger: logging.Logger):
     """
-    Saves the attack results to a JSON file.
+    Saves the attack results to a JSON file with error handling and backup.
 
     Args:
         results: List of result dictionaries to save.
         filename: Name of the output JSON file.
         logger: Logger instance for logging.
     """
-    try:
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump(results, f, ensure_ascii=False, indent=4)
+    if safe_json_dump(results, filename, logger):
         logger.info(f"Saved results to {filename}")
-    except Exception as e:
-        logger.error(f"Error saving results to {filename}: {str(e)}")
+    else:
+        logger.error(f"Failed to save results to {filename}")
 
 
 if __name__ == "__main__":
@@ -186,6 +217,7 @@ if __name__ == "__main__":
     parser.add_argument("--target_model", type=str, default="gpt-4-turbo", help="Name of the target model to use.")
     parser.add_argument("--pipeline_model", type=str, default="mistralai/Mixtral-8x22B-Instruct-v0.1", help="Name of the pipeline model to use.")
     parser.add_argument("--results_json", type=str, default="tempest_attack_results_gpt4.json", help="Filename for the results JSON.")
+    parser.add_argument("--resume", action="store_true", help="Resume from existing results file if it exists.")
     args = parser.parse_args()
-    
+
     main(args)

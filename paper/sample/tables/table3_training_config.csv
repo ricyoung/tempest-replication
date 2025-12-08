@@ -1,0 +1,18 @@
+Parameter,Value
+Base Model,Qwen3-Embedding-8B (8B parameters)
+Fine-tuning Method,LoRA + INT8 quantization
+LoRA Rank,16
+LoRA Alpha,32
+Training Data,106386 cardiology pairs
+Validation Data,12516 pairs
+Test Data,6259 pairs
+Epochs,2
+Batch Size,128
+Learning Rate,2 × 10⁻⁴
+Optimizer,AdamW
+LR Schedule,Cosine annealing
+Training Time,658.6 minutes (~11 hours)
+Hardware,NVIDIA H100 PCIe GPU (80GB)
+Loss Function,InfoNCE with in-batch negatives
+Temperature,0.05
+Pooling Strategy,End-of-sequence (EOS) token

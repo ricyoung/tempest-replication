@@ -1,0 +1,185 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{perez2022red,ganguli2022red}
+\citation{ouyang2022training,bai2022constitutional}
+\citation{ouyang2022training}
+\citation{bai2022constitutional}
+\citation{wei2023jailbroken,zou2023universal}
+\citation{li2024llm}
+\citation{zhou2025tempest}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{kaplan2020scaling}
+\citation{wang2025outthink,li2025hcot}
+\citation{chen2025weakestlink,cao2025r2d}
+\citation{ouyang2022training}
+\citation{bai2022constitutional}
+\citation{wolf2025trilemma}
+\citation{wei2023jailbroken}
+\citation{zou2023universal}
+\citation{andriushchenko2024jailbreaking}
+\citation{souly2024h4rm3l}
+\citation{russinovich2024crescendo}
+\citation{jiang2024redqueen}
+\citation{li2024llm}
+\citation{chen2025autoadv}
+\citation{zhang2025deception}
+\citation{cheng2024derail}
+\citation{wu2025pattern}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Literature Review}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Safety Alignment Approaches}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Single-Turn Jailbreak Research}{2}{subsection.2.2}\protected@file@percent }
+\citation{zhou2025tempest}
+\citation{wang2025outthink}
+\citation{zhang2025lrmsafety}
+\citation{li2025hcot}
+\citation{chen2025weakestlink}
+\citation{cao2025r2d}
+\citation{xie2025armor}
+\citation{liu2025proact}
+\citation{wang2025tssf}
+\citation{andriushchenko2024jailbreaking}
+\citation{kaplan2020scaling}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Multi-Turn Attack Advances}{3}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Reasoning Models and Safety}{3}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Emerging Defenses}{3}{subsection.2.5}\protected@file@percent }
+\citation{zhou2025tempest}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Research Gaps}{4}{subsection.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{4}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Models Evaluated}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Models evaluated in this study.}}{4}{table.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:models}{{1}{4}{Models evaluated in this study}{table.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Attack Framework: TEMPEST}{4}{subsection.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces TEMPEST system architecture. The attacker model generates adaptive attack prompts using the ``Siege'' chain-of-attack format. Target model responses are evaluated for harm, with feedback informing subsequent attack strategy selection.}}{5}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:architecture}{{1}{5}{TEMPEST system architecture. The attacker model generates adaptive attack prompts using the ``Siege'' chain-of-attack format. Target model responses are evaluated for harm, with feedback informing subsequent attack strategy selection}{figure.caption.2}{}}
+\citation{chao2024jailbreakbench}
+\citation{zhou2025tempest}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Multi-branch conversation tree exploration using breadth-first search. Multiple attack strategies are explored in parallel, with low-scoring branches pruned to focus computational resources on promising attack paths.}}{6}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:tree}{{2}{6}{Multi-branch conversation tree exploration using breadth-first search. Multiple attack strategies are explored in parallel, with low-scoring branches pruned to focus computational resources on promising attack paths}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Dataset}{6}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Baseline Justification}{6}{subsection.3.4}\protected@file@percent }
+\citation{zou2023universal}
+\citation{zhou2025tempest}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Attack Strategies}{7}{subsection.3.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Vulnerability spectrum by model, sorted by parameter count (left to right). Attack success rates range from 42\% (Kimi K2 Thinking) to 100\% (Gemma3 12B, Mistral Large 3). Red indicates ASR $\geq $ 90\%, yellow 50--89\%, green $<$ 50\%. The absence of a downward trend from left to right indicates no relationship between model scale and adversarial robustness. The dashed line indicates the 97\% baseline from Zhou and Arel (2025).}}{8}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:spectrum}{{3}{8}{Vulnerability spectrum by model, sorted by parameter count (left to right). Attack success rates range from 42\% (Kimi K2 Thinking) to 100\% (Gemma3 12B, Mistral Large 3). Red indicates ASR $\geq $ 90\%, yellow 50--89\%, green $<$ 50\%. The absence of a downward trend from left to right indicates no relationship between model scale and adversarial robustness. The dashed line indicates the 97\% baseline from Zhou and Arel (2025)}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Evaluation Metrics and Justification}{8}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Preprocessing and Data Handling}{8}{subsection.3.7}\protected@file@percent }
+\citation{zhou2025tempest}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Procedure}{9}{subsection.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Secondary Evaluation Protocol}{9}{subsection.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Ethical Considerations}{9}{subsection.3.10}\protected@file@percent }
+\citation{zhou2025tempest}
+\citation{chao2024jailbreakbench}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.11}Reproducibility and Data Availability}{10}{subsection.3.11}\protected@file@percent }
+\citation{zhou2025tempest}
+\citation{zhou2025tempest}
+\citation{zhou2025tempest}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{11}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overall Attack Success Rates}{11}{subsection.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Attack success rates by model compared to original TEMPEST results~\cite  {zhou2025tempest}. All models evaluated on 100 JailbreakBench behaviors. Models show a spectrum of vulnerability, from immediate jailbreak (1.0 turns) to sustained resistance (22.7 turns).}}{11}{table.caption.5}\protected@file@percent }
+\newlabel{tab:results}{{2}{11}{Attack success rates by model compared to original TEMPEST results~\cite {zhou2025tempest}. All models evaluated on 100 JailbreakBench behaviors. Models show a spectrum of vulnerability, from immediate jailbreak (1.0 turns) to sustained resistance (22.7 turns)}{table.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Scale vs.\ safety: model size does not predict adversarial robustness. (a) Total parameters vs.\ ASR shows no correlation ($r = -0.12$, n.s.) across nine models (excluding thinking mode variant). (b) Active parameters vs.\ ASR similarly shows no relationship. Filled circles indicate dense architecture (Gemma3 only); open triangles indicate mixture-of-experts. The smallest model (12B Gemma3) and largest MoE models (675B Mistral Large 3, 1T Kimi K2) all achieve $\geq $97\% ASR in standard mode. Dotted line indicates Zhou and Arel (2025) baseline.}}{12}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:scale}{{4}{12}{Scale vs.\ safety: model size does not predict adversarial robustness. (a) Total parameters vs.\ ASR shows no correlation ($r = -0.12$, n.s.) across nine models (excluding thinking mode variant). (b) Active parameters vs.\ ASR similarly shows no relationship. Filled circles indicate dense architecture (Gemma3 only); open triangles indicate mixture-of-experts. The smallest model (12B Gemma3) and largest MoE models (675B Mistral Large 3, 1T Kimi K2) all achieve $\geq $97\% ASR in standard mode. Dotted line indicates Zhou and Arel (2025) baseline}{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Attack success rates by harm category across models. Heatmap shows ASR (\%) for each model-category combination. Highly vulnerable models (Gemma3, Mistral, DeepSeek) show uniform 100\% ASR across categories, while more resistant models exhibit category-specific variation (e.g., MiniMax M2: 10\% Violence vs. 70\% Privacy).}}{13}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:heatmap}{{5}{13}{Attack success rates by harm category across models. Heatmap shows ASR (\%) for each model-category combination. Highly vulnerable models (Gemma3, Mistral, DeepSeek) show uniform 100\% ASR across categories, while more resistant models exhibit category-specific variation (e.g., MiniMax M2: 10\% Violence vs. 70\% Privacy)}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Computational cost of attacking each model. The scatter plot reveals an inverse relationship between attack success rate and total API queries required per 100 behaviors. Highly vulnerable models (red, upper-left) require fewer than 2,500 queries because TEMPEST's early termination stops exploration upon successful jailbreak. Resistant models (green, lower-right) require 13,000--24,000 queries as the tree search exhaustively explores branches before finding successful attack paths. This 10--27$\times $ cost multiplier demonstrates that while resistance rarely prevents eventual jailbreak, it substantially increases computational cost for attackers---a practical deterrent even when absolute prevention fails.}}{14}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:cost}{{6}{14}{Computational cost of attacking each model. The scatter plot reveals an inverse relationship between attack success rate and total API queries required per 100 behaviors. Highly vulnerable models (red, upper-left) require fewer than 2,500 queries because TEMPEST's early termination stops exploration upon successful jailbreak. Resistant models (green, lower-right) require 13,000--24,000 queries as the tree search exhaustively explores branches before finding successful attack paths. This 10--27$\times $ cost multiplier demonstrates that while resistance rarely prevents eventual jailbreak, it substantially increases computational cost for attackers---a practical deterrent even when absolute prevention fails}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Query and Branching Budget Transparency}{14}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Stored conversation messages per model. These counts reflect only the final successful attack paths retained for analysis; total API queries including all explored branches exceeded 97,000 (see Table~\ref {tab:api_queries}).}}{15}{table.caption.9}\protected@file@percent }
+\newlabel{tab:queries}{{3}{15}{Stored conversation messages per model. These counts reflect only the final successful attack paths retained for analysis; total API queries including all explored branches exceeded 97,000 (see Table~\ref {tab:api_queries})}{table.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Total API queries per model including all explored branches. Target queries are calls to the model under attack; attacker queries are calls to the attack generation model (DeepSeek V3.1); evaluator queries assess response harmfulness. The 27$\times $ difference between most and least vulnerable models demonstrates the computational cost of attacking resistant systems.}}{15}{table.caption.10}\protected@file@percent }
+\newlabel{tab:api_queries}{{4}{15}{Total API queries per model including all explored branches. Target queries are calls to the model under attack; attacker queries are calls to the attack generation model (DeepSeek V3.1); evaluator queries assess response harmfulness. The 27$\times $ difference between most and least vulnerable models demonstrates the computational cost of attacking resistant systems}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Vulnerability Spectrum: Turn Distribution Analysis}{15}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Thinking Mode Comparison}{16}{subsection.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Thinking mode comparison: Kimi K2 variants under identical TEMPEST attacks on all 100 behaviors.}}{16}{table.caption.11}\protected@file@percent }
+\newlabel{tab:thinking}{{5}{16}{Thinking mode comparison: Kimi K2 variants under identical TEMPEST attacks on all 100 behaviors}{table.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Thinking mode comparison for Kimi K2. (a) Attack success rate reduced by 55 percentage points when thinking mode was enabled (97\% $\rightarrow $ 42\%). (b) Average turns to jailbreak increased 10.8$\times $ (1.6 $\rightarrow $ 17.2 turns), indicating substantially greater computational cost for successful attacks. While thinking mode provides meaningful protection, 42\% of attacks still succeed, indicating residual vulnerability even with extended reasoning.}}{16}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:thinking}{{7}{16}{Thinking mode comparison for Kimi K2. (a) Attack success rate reduced by 55 percentage points when thinking mode was enabled (97\% $\rightarrow $ 42\%). (b) Average turns to jailbreak increased 10.8$\times $ (1.6 $\rightarrow $ 17.2 turns), indicating substantially greater computational cost for successful attacks. While thinking mode provides meaningful protection, 42\% of attacks still succeed, indicating residual vulnerability even with extended reasoning}{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Attack progression curves showing cumulative successful jailbreaks by conversation turn. Immediately vulnerable models (Mistral, DeepSeek, Gemma3) reach near-maximum success within 1--2 turns, exhibiting ``brittle'' defenses that fail immediately. Resistant models (GPT-OSS variants, MiniMax, Kimi K2 Thinking) show gradual accumulation requiring 10+ turns, demonstrating ``persistent'' defenses that eventually yield but impose substantial cost on attackers.}}{17}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:progression}{{8}{17}{Attack progression curves showing cumulative successful jailbreaks by conversation turn. Immediately vulnerable models (Mistral, DeepSeek, Gemma3) reach near-maximum success within 1--2 turns, exhibiting ``brittle'' defenses that fail immediately. Resistant models (GPT-OSS variants, MiniMax, Kimi K2 Thinking) show gradual accumulation requiring 10+ turns, demonstrating ``persistent'' defenses that eventually yield but impose substantial cost on attackers}{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Attack Strategy Effectiveness}{17}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Category-Level Analysis}{17}{subsection.4.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Behavior difficulty distribution across all models. The funnel visualization shows that most behaviors are universally exploitable: 79\% succeeded against 8+ models, while only 3\% showed meaningful resistance (succeeding against $\leq $5 models). No behavior resisted all models entirely.}}{19}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:funnel}{{9}{19}{Behavior difficulty distribution across all models. The funnel visualization shows that most behaviors are universally exploitable: 79\% succeeded against 8+ models, while only 3\% showed meaningful resistance (succeeding against $\leq $5 models). No behavior resisted all models entirely}{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Attack Strategy Observations}{20}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Summary of Key Findings}{20}{subsection.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{20}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Hypothesis Evaluation}{20}{subsection.5.1}\protected@file@percent }
+\citation{zou2023universal}
+\citation{mazeika2024harmbench}
+\citation{li2024llm}
+\citation{zhou2025m2s}
+\citation{jiang2025scaling}
+\citation{russinovich2024crescendo}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Literature context: when thinking mode helps vs.\ hurts safety. The matrix shows that the effect of thinking mode depends on attack type. Reasoning-targeted attacks (H-CoT) exploit visible reasoning chains, causing safety to degrade. General multi-turn attacks (this work, baseline) show that thinking mode provides protection---likely because extended reasoning enables identification of adversarial framing. Structured reasoning defenses (ARMOR) achieve strong protection. The finding that TEMPEST attacks are partially mitigated by thinking mode suggests that general multi-turn attacks do not specifically exploit reasoning chains, unlike H-CoT.}}{21}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:literature}{{10}{21}{Literature context: when thinking mode helps vs.\ hurts safety. The matrix shows that the effect of thinking mode depends on attack type. Reasoning-targeted attacks (H-CoT) exploit visible reasoning chains, causing safety to degrade. General multi-turn attacks (this work, baseline) show that thinking mode provides protection---likely because extended reasoning enables identification of adversarial framing. Structured reasoning defenses (ARMOR) achieve strong protection. The finding that TEMPEST attacks are partially mitigated by thinking mode suggests that general multi-turn attacks do not specifically exploit reasoning chains, unlike H-CoT}{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Contributions and Significance}{21}{subsection.5.2}\protected@file@percent }
+\citation{kaplan2020scaling}
+\citation{li2025hcot}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Distribution of turns required for successful jailbreak across all models. The distribution varies substantially by model, with highly vulnerable models succeeding in 1 to 2 turns and resistant models requiring 10 or more turns.}}{22}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:turns}{{11}{22}{Distribution of turns required for successful jailbreak across all models. The distribution varies substantially by model, with highly vulnerable models succeeding in 1 to 2 turns and resistant models requiring 10 or more turns}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Limitations}{22}{subsection.5.3}\protected@file@percent }
+\citation{liu2025proact}
+\citation{wang2025tssf}
+\citation{xie2025armor}
+\citation{cao2025r2d}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Future Directions}{23}{subsection.5.4}\protected@file@percent }
+\citation{zhou2025tempest}
+\bibcite{ouyang2022training}{{1}{}{{}}{{}}}
+\bibcite{bai2022constitutional}{{2}{}{{}}{{}}}
+\bibcite{perez2022red}{{3}{}{{}}{{}}}
+\bibcite{wei2023jailbroken}{{4}{}{{}}{{}}}
+\bibcite{zou2023universal}{{5}{}{{}}{{}}}
+\bibcite{chao2024jailbreakbench}{{6}{}{{}}{{}}}
+\bibcite{mazeika2024harmbench}{{7}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Recommendations}{24}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Conclusion}{24}{subsection.5.6}\protected@file@percent }
+\bibcite{li2024llm}{{8}{}{{}}{{}}}
+\bibcite{doumbouya2024multi}{{9}{}{{}}{{}}}
+\bibcite{souly2024h4rm3l}{{10}{}{{}}{{}}}
+\bibcite{kaplan2020scaling}{{11}{}{{}}{{}}}
+\bibcite{ganguli2022red}{{12}{}{{}}{{}}}
+\bibcite{russinovich2024crescendo}{{13}{}{{}}{{}}}
+\bibcite{jiang2024redqueen}{{14}{}{{}}{{}}}
+\bibcite{cheng2024derail}{{15}{}{{}}{{}}}
+\bibcite{andriushchenko2024jailbreaking}{{16}{}{{}}{{}}}
+\bibcite{zhou2025m2s}{{17}{}{{}}{{}}}
+\bibcite{jiang2025scaling}{{18}{}{{}}{{}}}
+\bibcite{wang2025autoadv}{{19}{}{{}}{{}}}
+\bibcite{kumar2024advances}{{20}{}{{}}{{}}}
+\bibcite{tedeschi2024alert}{{21}{}{{}}{{}}}
+\bibcite{zhang2024jailjudge}{{22}{}{{}}{{}}}
+\bibcite{liu2025multiturn}{{23}{}{{}}{{}}}
+\bibcite{wu2025pattern}{{24}{}{{}}{{}}}
+\bibcite{zhou2025tempest}{{25}{}{{}}{{}}}
+\bibcite{wolf2025trilemma}{{26}{}{{}}{{}}}
+\bibcite{chen2025autoadv}{{27}{}{{}}{{}}}
+\bibcite{zhang2025deception}{{28}{}{{}}{{}}}
+\bibcite{wang2025qdrt}{{29}{}{{}}{{}}}
+\bibcite{liu2025proact}{{30}{}{{}}{{}}}
+\bibcite{wang2025tssf}{{31}{}{{}}{{}}}
+\bibcite{anthropic2025cai}{{32}{}{{}}{{}}}
+\bibcite{wang2025outthink}{{33}{}{{}}{{}}}
+\bibcite{zhang2025lrmsafety}{{34}{}{{}}{{}}}
+\bibcite{li2025hcot}{{35}{}{{}}{{}}}
+\bibcite{chen2025weakestlink}{{36}{}{{}}{{}}}
+\bibcite{cao2025r2d}{{37}{}{{}}{{}}}
+\bibcite{xie2025armor}{{38}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}TEMPEST Attack Strategies}{27}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Academic/Research Framing}{27}{subsection.A.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Bundled Requests}{27}{subsection.A.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Security Audit/Red Team Framing}{27}{subsection.A.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Refusal Suppression}{27}{subsection.A.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5}Progressive Escalation (Crescendo)}{27}{subsection.A.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.6}Screenplay/Fiction Framing}{27}{subsection.A.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.7}Filter Calibration Framing}{28}{subsection.A.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {B}Conversation Examples}{28}{appendix.B}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}Gemma3:12b (Single-Turn Success)}{28}{subsection.B.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}Kimi-k2:1t (Two-Turn Adaptation)}{28}{subsection.B.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.3}Cogito 2.1:671b (Two-Turn Adaptation)}{29}{subsection.B.3}\protected@file@percent }
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
+\@writefile{toc}{\contentsline {section}{\numberline {C}Full Results Tables}{30}{appendix.C}\protected@file@percent }
+\gdef \@abspage@last{30}

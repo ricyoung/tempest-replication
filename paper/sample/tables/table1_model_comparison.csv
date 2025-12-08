@@ -1,0 +1,6 @@
+Model,Type,Acc@1,Acc@5,MRR,Mean Similarity
+CardioEmbed,Cardiology-specialized,99.60%,99.98%,0.9976,0.909
+Qwen3-8B-Base,General LLM embedding,93.83%,96.34%,0.9506,0.919
+GTE-Base,General-purpose,92.28%,95.99%,0.9401,0.883
+MedEmbed-base,Medical IR,91.58%,94.65%,0.9313,0.932
+MedTE,Medical (SOTA),83.66%,88.99%,0.8611,0.887

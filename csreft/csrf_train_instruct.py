@@ -137,6 +137,18 @@ def parse_args():
         action="store_true",
         help="Whether to run Alpaca evaluation after training"
     )
+    parser.add_argument(
+        "--resume_from_checkpoint",
+        type=str,
+        default=None,
+        help="Path to checkpoint to resume training from"
+    )
+    parser.add_argument(
+        "--save_steps",
+        type=int,
+        default=100,
+        help="Save checkpoint every X steps"
+    )
     return parser.parse_args()
 
 def load_and_process_dataset(args):
@@ -331,12 +343,16 @@ def main():
         lr_scheduler_type="cosine",
         logging_steps=1,
         evaluation_strategy="no",
-        save_strategy="no",
+        save_strategy="steps",
+        save_steps=args.save_steps,
+        save_total_limit=3,
         report_to=["wandb"],
         remove_unused_columns=True,
         dataloader_num_workers=4,
         logging_first_step=True,
-        max_grad_norm=1.0
+        max_grad_norm=1.0,
+        load_best_model_at_end=False,
+        resume_from_checkpoint=args.resume_from_checkpoint
     )
     
     trainer = CSRFTrainerForCausalLM(

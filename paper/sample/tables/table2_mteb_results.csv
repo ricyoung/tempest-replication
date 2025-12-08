@@ -1,0 +1,4 @@
+Task,Type,Main Metric,CardioEmbed Score,Interpretation
+BIOSSES,Similarity,Spearman ρ,0.7748,Biomedical sentence similarity
+SciFact,Retrieval,NDCG@10,0.6098,Scientific fact verification
+NFCorpus,Retrieval,NDCG@10,0.2026,Medical/nutrition retrieval

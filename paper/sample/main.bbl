@@ -1,0 +1,170 @@
+\begin{thebibliography}{10}
+
+\bibitem{clinicalbert2019}
+Emily Alsentzer et~al.
+\newblock Publicly available clinical bert embeddings.
+\newblock {\em arXiv preprint arXiv:1904.05342}, 2019.
+
+\bibitem{cui2vec}
+Andrew~L. Beam, Benjamin Kompa, Allen Schmaltz, Inbar Fried, Griffin Weber,
+  Nathan Palmer, Xu~Shi, Tianxi Cai, and Isaac~S. Kohane.
+\newblock Clinical concept embeddings learned from massive sources of
+  multimodal medical data.
+\newblock {\em Pacific Symposium on Biocomputing}, 25:295--306, 2020.
+
+\bibitem{scibert2019}
+Iz~Beltagy, Kyle Lo, and Arman Cohan.
+\newblock Scibert: A pretrained language model for scientific text.
+\newblock In {\em EMNLP 2019}, 2019.
+
+\bibitem{nfcorpus2016}
+Veronika Boteva et~al.
+\newblock A full-text learning to rank dataset for medical information
+  retrieval.
+\newblock In {\em Proceedings of the 2016 Conference on Information and
+  Knowledge Management}, 2016.
+
+\bibitem{biosentvec}
+Qingyu Chen, Yifan Peng, and Zhiyong Lu.
+\newblock Biosentvec: creating sentence embeddings for biomedical texts.
+\newblock In {\em 2019 IEEE International Conference on Healthcare Informatics
+  (ICHI)}, pages 1--5, 2019.
+
+\bibitem{simcse2021}
+Tianyu Gao, Xingcheng Yao, and Danqi Chen.
+\newblock Simcse: Simple contrastive learning of sentence embeddings.
+\newblock In {\em EMNLP 2021}, 2021.
+
+\bibitem{pubmedbert}
+Yu~Gu, Robert Tinn, Hao Cheng, Michael Lucas, Naoto Usuyama, Xiaodong Liu,
+  Tristan Naumann, Jianfeng Gao, and Hoifung Poon.
+\newblock Domain-specific language model pretraining for biomedical natural
+  language processing.
+\newblock {\em ACM Transactions on Computing for Healthcare}, 3(1):1--23, 2021.
+
+\bibitem{lora2021}
+Edward~J Hu et~al.
+\newblock Lora: Low-rank adaptation of large language models.
+\newblock {\em arXiv preprint arXiv:2106.09685}, 2021.
+
+\bibitem{contriever2021}
+Gautier Izacard et~al.
+\newblock Unsupervised dense information retrieval with contrastive learning.
+\newblock {\em arXiv preprint arXiv:2112.09118}, 2021.
+
+\bibitem{kazi_economic_burden_2024}
+Dhruv~S. Kazi, Rishi~K. Wadhera, Cynthia Shen, David~J. Maron, Lisa~A.
+  Kaltenbach, Robert~W. Yeh, et~al.
+\newblock Forecasting the economic burden of cardiovascular disease and stroke
+  in the united states through 2050: A presidential advisory from the american
+  heart association.
+\newblock {\em Circulation}, 150(2):e89--e115, 2024.
+
+\bibitem{medte}
+Mohammad Khodadad.
+\newblock Medte: Medical text embeddings via contrastive learning.
+\newblock HuggingFace Model Repository, 2024.
+
+\bibitem{domain_specification}
+Mohammad Khodadad, Ali~Shiraee Kasmaee, Mahdi Astaraki, and Hamidreza Mahyar.
+\newblock Towards domain specification of embedding models in medicine.
+\newblock {\em arXiv preprint arXiv:2507.19407}, 2025.
+
+\bibitem{biobert}
+Jinhyuk Lee, Wonjin Yoon, Sungdong Kim, Donghyeon Kim, Sunkyu Kim, Chan~Ho So,
+  and Jaewoo Kang.
+\newblock Biobert: a pre-trained biomedical language representation model for
+  biomedical text mining.
+\newblock {\em Bioinformatics}, 36(4):1234--1240, 2020.
+
+\bibitem{clinical_modernbert}
+Simon~A. Lee, Anthony Wu, and Jeffrey~N. Chiang.
+\newblock Clinical modernbert: An efficient and long context encoder for
+  biomedical text.
+\newblock {\em arXiv preprint arXiv:2504.03964}, 2025.
+
+\bibitem{mteb}
+Niklas Muennighoff, Nouamane Tazi, Loic Magne, and Nils Reimers.
+\newblock Mteb: Massive text embedding benchmark.
+\newblock In {\em Proceedings of EACL}, pages 2014--2037, 2023.
+
+\bibitem{sentencebert2019}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-bert: Sentence embeddings using siamese bert-networks.
+\newblock In {\em EMNLP 2019}, 2019.
+
+\bibitem{medeir}
+Anand Selvadurai et~al.
+\newblock Medeir: A specialized medical embedding model for enhanced
+  information retrieval.
+\newblock {\em arXiv preprint arXiv:2505.13482}, 2025.
+
+\bibitem{biosses2017}
+Gizem Sogancioglu, Ibrahim Ozyurt, and Arzucan Ozturk.
+\newblock Biosses: A semantic sentence similarity corpus for the biomedical
+  domain.
+\newblock In {\em BioNLP 2017 Workshop}, 2017.
+
+\bibitem{beir2021}
+Nandan Thakur et~al.
+\newblock Beir: A heterogeneous benchmark for zero-shot evaluation of
+  information retrieval models.
+\newblock In {\em NeurIPS Datasets and Benchmarks}, 2021.
+
+\bibitem{tsao_heart_disease_2024}
+Connie~W. Tsao, Aaron~W. Aday, Zaid~I. Almarzooq, Cheryl A.~M. Anderson, Pankaj
+  Arora, Christy~L. Avery, et~al.
+\newblock 2024 heart disease and stroke statistics: A report of us and global
+  data from the american heart association.
+\newblock {\em Circulation}, 149(8):e347--e913, 2024.
+
+\bibitem{infonce}
+Aaron van~den Oord, Yazhe Li, and Oriol Vinyals.
+\newblock Representation learning with contrastive predictive coding.
+\newblock {\em arXiv preprint arXiv:1807.03748}, 2018.
+
+\bibitem{scifact2020}
+David Wadden et~al.
+\newblock Fact or fiction: Verifying scientific claims.
+\newblock In {\em EMNLP 2020}, 2020.
+
+\bibitem{deepseek_ocr}
+Haoran Wei, Yaofeng Sun, and Yukun Li.
+\newblock Deepseek-ocr: Contexts optical compression.
+\newblock {\em arXiv preprint arXiv:2510.18234}, 2025.
+
+\bibitem{wolf2020huggingface}
+Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue,
+  Anthony Moi, Pierric Cistac, Tim Rault, Remi Louf, Morgan Funtowicz, Joe
+  Davison, Sam Shleifer, Patrick von Platen, Clara Ma, Yacine Jernite, Julien
+  Plu, Canwen Xu, Teven Le~Scao, Sylvain Gugger, Mariama Drame, Quentin Lhoest,
+  and Alexander~M. Rush.
+\newblock Transformers: State-of-the-art natural language processing.
+\newblock In {\em Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing: System Demonstrations}, pages 38--45, 2020.
+
+\bibitem{cardiology_nlp_review}
+Kailai Yang, Yan Leng, Xin Zhang, Tianlin Zhang, Paul Thompson, Bernard
+  Keavney, Maciej Tomaszewski, and Sophia Ananiadou.
+\newblock Natural language processing for cardiology: A narrative review.
+\newblock {\em arXiv preprint arXiv:2510.16708}, 2025.
+
+\bibitem{esc_imaging}
+Jose~Luis Zamorano, Jeroen~J Bax, Frank Rademakers, and Juhani Knuuti.
+\newblock {\em The ESC Textbook of Cardiovascular Imaging}.
+\newblock Oxford University Press, 3 edition, 2021.
+
+\bibitem{biowordvec}
+Yijia Zhang, Qingyu Chen, Zhihao Yang, Hongfei Lin, and Zhiyong Lu.
+\newblock Biowordvec, improving biomedical word embeddings with subword
+  information and mesh.
+\newblock {\em Scientific Data}, 6(1):52, 2019.
+
+\bibitem{braunwalds}
+Douglas~P Zipes, Peter Libby, Robert~O Bonow, Douglas~L Mann, Gordon~F
+  Tomaselli, and Eugene Braunwald.
+\newblock {\em Braunwald's Heart Disease: A Textbook of Cardiovascular
+  Medicine}.
+\newblock Elsevier, 11 edition, 2018.
+
+\end{thebibliography}

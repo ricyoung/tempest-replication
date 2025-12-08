@@ -1,0 +1,98 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{tsao_heart_disease_2024}
+\citation{kazi_economic_burden_2024}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{pubmedbert}
+\citation{biobert}
+\citation{biowordvec}
+\citation{biosentvec}
+\citation{cui2vec}
+\citation{clinical_modernbert}
+\citation{medeir}
+\citation{scibert2019,clinicalbert2019}
+\citation{sentencebert2019,simcse2021}
+\citation{beir2021,contriever2021}
+\citation{braunwalds}
+\citation{esc_imaging}
+\citation{deepseek_ocr}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Methods}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Data Collection and Preprocessing}{3}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Model Architecture and Training}{3}{subsection.2.2}\protected@file@percent }
+\citation{lora2021}
+\citation{infonce}
+\citation{medte}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Baseline Models}{4}{subsection.2.3}\protected@file@percent }
+\citation{mteb}
+\citation{biosses2017}
+\citation{scifact2020}
+\citation{nfcorpus2016}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Evaluation}{5}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Ethics and IRB}{5}{subsection.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Preregistration}{5}{subsection.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{5}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Training Corpus Statistics}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Domain-Specific Cardiac Performance}{5}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Comparison with Medical and General Embeddings}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Cardiology Semantic Retrieval Performance Comparison}}{6}{table.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:model_comparison}{{1}{6}{Cardiology Semantic Retrieval Performance Comparison}{table.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}MTEB Medical Benchmark Performance}{6}{subsection.3.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces MTEB Medical Benchmark Performance}}{6}{table.caption.2}\protected@file@percent }
+\newlabel{tab:mteb_results}{{2}{6}{MTEB Medical Benchmark Performance}{table.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces MTEB medical benchmark performance visualization for CardioEmbed (higher is better). CardioEmbed achieved 0.77 Spearman correlation on BIOSSES (biomedical similarity) and 0.61 NDCG@10 on SciFact (scientific verification). Performance on NFCorpus (0.20 NDCG@10, general medical retrieval) is shown for comparison. Color zones indicate Strong (green, $>$0.6), Moderate (orange, 0.3--0.6), and areas requiring improvement (red, $<$0.3).}}{7}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:mteb_heatmap}{{1}{7}{MTEB medical benchmark performance visualization for CardioEmbed (higher is better). CardioEmbed achieved 0.77 Spearman correlation on BIOSSES (biomedical similarity) and 0.61 NDCG@10 on SciFact (scientific verification). Performance on NFCorpus (0.20 NDCG@10, general medical retrieval) is shown for comparison. Color zones indicate Strong (green, $>$0.6), Moderate (orange, 0.3--0.6), and areas requiring improvement (red, $<$0.3)}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Cardiology retrieval performance comparison across five embedding models (higher is better). CardioEmbed achieves 99.60\% Acc@1, representing +15.94\% improvement over MedTE (SOTA medical model).}}{7}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:model_comparison}{{2}{7}{Cardiology retrieval performance comparison across five embedding models (higher is better). CardioEmbed achieves 99.60\% Acc@1, representing +15.94\% improvement over MedTE (SOTA medical model)}{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Retrieval accuracy at different ranks (higher is better). CardioEmbed (fine‑tuned) achieved 99.6\%--100\% across all ranks, while the base model showed lower accuracy at all rank thresholds.}}{8}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:accuracy_at_k}{{3}{8}{Retrieval accuracy at different ranks (higher is better). CardioEmbed (fine‑tuned) achieved 99.6\%--100\% across all ranks, while the base model showed lower accuracy at all rank thresholds}{figure.caption.5}{}}
+\citation{domain_specification}
+\citation{cardiology_nlp_review}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mean Reciprocal Rank (MRR) comparison across embedding models. CardioEmbed achieves 0.9976 MRR, approaching perfect ranking performance (1.0) and outperforming MedTE (0.8611), GTE-Base (0.9401), MedEmbed (0.9313), and base Qwen3-8B (0.9506). Higher MRR indicates that correct matches are consistently ranked at or near the top position.}}{9}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:mrr_comparison}{{4}{9}{Mean Reciprocal Rank (MRR) comparison across embedding models. CardioEmbed achieves 0.9976 MRR, approaching perfect ranking performance (1.0) and outperforming MedTE (0.8611), GTE-Base (0.9401), MedEmbed (0.9313), and base Qwen3-8B (0.9506). Higher MRR indicates that correct matches are consistently ranked at or near the top position}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion}{9}{section.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Performance improvement waterfall showing incremental contributions to CardioEmbed's final accuracy (higher is better). Starting from MedTE baseline (83.66\%), switching to Qwen3-8B foundation model provided +10.17\% gain, while cardiology-specific fine-tuning added +5.77\%, achieving final performance of 99.60\%. The waterfall visualization demonstrates that both foundation model selection and domain specialization contribute substantially to the final outcome.}}{10}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:improvement_waterfall}{{5}{10}{Performance improvement waterfall showing incremental contributions to CardioEmbed's final accuracy (higher is better). Starting from MedTE baseline (83.66\%), switching to Qwen3-8B foundation model provided +10.17\% gain, while cardiology-specific fine-tuning added +5.77\%, achieving final performance of 99.60\%. The waterfall visualization demonstrates that both foundation model selection and domain specialization contribute substantially to the final outcome}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Multi-dimensional performance comparison across five key capabilities. CardioEmbed (red) excels in cardiology-specific retrieval (99.6\%) and maintains strong biomedical similarity (77.5\%) and scientific verification (61.0\%) performance. The radar chart illustrates the intentional trade-off: depth in cardiology versus breadth across general medicine. MedTE (blue) shows more balanced but lower overall performance, while base Qwen3-8B (green) demonstrates strong general capabilities with moderate domain-specific performance.}}{11}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:radar_performance}{{6}{11}{Multi-dimensional performance comparison across five key capabilities. CardioEmbed (red) excels in cardiology-specific retrieval (99.6\%) and maintains strong biomedical similarity (77.5\%) and scientific verification (61.0\%) performance. The radar chart illustrates the intentional trade-off: depth in cardiology versus breadth across general medicine. MedTE (blue) shows more balanced but lower overall performance, while base Qwen3-8B (green) demonstrates strong general capabilities with moderate domain-specific performance}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Clinical Implications}{12}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Limitations}{12}{subsection.4.2}\protected@file@percent }
+\citation{wolf2020huggingface}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Future Directions}{13}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}\protected@file@percent }
+\bibstyle{plain}
+\bibdata{bibliography/references}
+\bibcite{clinicalbert2019}{1}
+\bibcite{cui2vec}{2}
+\bibcite{scibert2019}{3}
+\bibcite{nfcorpus2016}{4}
+\bibcite{biosentvec}{5}
+\bibcite{simcse2021}{6}
+\bibcite{pubmedbert}{7}
+\bibcite{lora2021}{8}
+\bibcite{contriever2021}{9}
+\bibcite{kazi_economic_burden_2024}{10}
+\bibcite{medte}{11}
+\bibcite{domain_specification}{12}
+\bibcite{biobert}{13}
+\bibcite{clinical_modernbert}{14}
+\bibcite{mteb}{15}
+\bibcite{sentencebert2019}{16}
+\bibcite{medeir}{17}
+\bibcite{biosses2017}{18}
+\bibcite{beir2021}{19}
+\bibcite{tsao_heart_disease_2024}{20}
+\bibcite{infonce}{21}
+\bibcite{scifact2020}{22}
+\bibcite{deepseek_ocr}{23}
+\bibcite{wolf2020huggingface}{24}
+\bibcite{cardiology_nlp_review}{25}
+\bibcite{esc_imaging}{26}
+\bibcite{biowordvec}{27}
+\bibcite{braunwalds}{28}
+\newlabel{LastPage}{{5}{16}{Author Contributions}{page.16}{}}
+\gdef\lastpage@lastpage{16}
+\gdef\lastpage@lastpageHy{16}
+\gdef \@abspage@last{16}
